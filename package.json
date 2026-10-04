@@ -1,0 +1,12 @@
+{
+    "name": "owasp-juice-shop-login",
+    "version": "1.0.0",
+    "description": "Simple login form for Juice Shop assignment",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^5.2.1"
+    }
+}
