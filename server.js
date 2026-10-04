@@ -29,8 +29,8 @@ app.post("/login", (req, res) => {
     }
 
     res.json({
-        //message: "Login information accepted." // This is the solution to fix the XSS exploit
-        message: "Welcome back, " + email + "!"
+        message: "Login information accepted." // This is the solution to fix the XSS exploit
+        // message: "Welcome back, " + email + "!"
     });
 });
 

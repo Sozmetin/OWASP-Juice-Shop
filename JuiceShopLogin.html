@@ -63,8 +63,8 @@
             })
                 .then(response => response.json())
                 .then(data => {
-                    // responseEl.textContent = data.message; // This is the solution to fix the XSS exploit
-                    responseEl.innerHTML = data.message;
+                    responseEl.textContent = data.message; // This is the solution to fix the XSS exploit
+                    // responseEl.innerHTML = data.message;
                 })
                 .catch(error => {
                     responseEl.textContent = "An error occurred.";
