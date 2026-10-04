@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .error {
+            color: #ec1d05;
+            font-size: 13px;
+            min-height: 18px;
+            margin-top: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Juice Shop Login</h2>
+
+        <form id="loginForm" onsubmit="return validateForm()">
+            <input type="text" id="email" placeholder="Email" />
+            <input type="password" id="password" placeholder="Password" />
+            <button type="submit">Login</button>
+            <div id="errorMessage" class="error"></div>
+        </form>
+
+        <h3>Server response:</h3>
+        <div id="response" class="response"></div>
+    </div>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("errorMessage");
+            const responseEl = document.getElementById("response");
+            errorMessage.textContent = "";
+            responseEl.textContent = "";
+
+            if (!email || !password) {
+                errorMessage.textContent = "Please enter information in all fields.";
+                return false;
+            }
+            if (!email.includes("@")) {
+                errorMessage.textContent = "Please enter a valid email.";
+                return false;
+            }
+            if (password.length < 8) {
+                errorMessage.textContent = "Password needs to be at least 8 characters long.";
+                return false;
+            }
+
+            responseEl.innerHTML = "<p>Welcome back, " + email + "!</p>";
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>
