@@ -50,4 +50,4 @@ The application uses both client-side and server-side validation. The browser fi
 
 ## Purpose
 
-This project was created for an assignment involving OWASP and web application security. The application will be tested for vulnerabilities such as SQL Injecting and Cross-Site Scripting (XSS) to better understand how insecure input handling can affect a web application.
+This project was created for an assignment involving OWASP and web application security. The application will be tested against  vulnerabilities such as, Cross-Site Scripting (XSS) to better understand how improper input handling can affect a web application.
